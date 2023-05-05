@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!-- ICS2O Programming Unit5-01-HTML-NumberDisplay -->
+<html>
+  <head>
+    
+    <!-- Meta Data -->
+    <meta charset="utf-8">
+    <meta name="description" content="List of Numbers Generator, with JS">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Shyla Oommen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon[1].png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32[1].png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16[1].png">
+    <link rel="manifest" href="/fav_index/site[1].webmanifest">
+    
+    <!-- Style Sheet and Google's MDL -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-indigo.min.css"> 
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Displaying Controlled Lists of Numbers, with JavaScript</title>
+  </head>
+  <body>
+    
+    <!-- To use Google's MDL + Path to JS File -->
+    
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+    <!-- Header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Displaying Numbers from Min to Max</span>
+        </div> 
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <center>
+              <h5>This program gives a list of integers ordered from least to greatest, given the minimum and maximum integers for the list.
+</h5><br><img src="./images/rand_numbers.jpg" alt="Random Numbers Image" width="30%" height="auto"><br>
+              </center>
+            </th>
+          </tr>
+        </table>
+        <!-- Numeric Text Field for Min -->
+        <form action="#">
+          <p>Enter Minimum Number:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="min"
+              step="1"
+            />
+            <label class="mdl-textfield__label" for="min">e.g. -7 ...</label>
+          </div>
+        </form>
+        <!-- Numeric Text Field for Max -->
+        <form action="#">
+          <p>Enter Maximum Number:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="max"
+              step="1"
+            />
+            <label class="mdl-textfield__label" for="max">e.g. 5 ...</label>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <center>
+          <br>
+          <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="DisplayListNumbers()"
+        >
+          Submit
+          </button>
+        </center>
+          <br>
+        </form>
+        <br>
+        <!-- Display list of numbers from min-max to user -->
+        <p>
+        <div id="results">
+          <div id="response"></div>
+        </div>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

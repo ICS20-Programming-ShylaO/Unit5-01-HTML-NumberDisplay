@@ -6,11 +6,6 @@
 
 "use strict";
 
-// This function allows for a specific output when the user input text field is left empty
-function isEmpty(str) {
-  return !str || 0 === str.length;
-}
-
 /**
  * This function generates a list of numbers starting from the min given to the max given.
  */
@@ -21,10 +16,11 @@ function DisplayListNumbers () {
   let userMax = parseInt(document.getElementById('max').value)
   let list = "";
   let response = "";
-  // response for when the min is greater than the max
-  if ((isEmpty(userMin)) || (isEmpty(userMax))) {
+  // response for when the min and/or max is not valid
+  if ((isNaN(userMin)) || (isNaN(userMax))) {
     response = "You have not entered a minimum and/or a maximum number. Please enter one or both of the following."
   }
+  // response for when the min is greater than the max
   else if (userMin > userMax) {
     response = "ERROR: You entered a minimum value that is greater than your maximum value. Try a smaller minimum."
   }

@@ -48,44 +48,24 @@
             </th>
           </tr>
         </table>
-        <!-- Numeric Text Field for Min -->
-        <form action="#">
-          <p>Enter Minimum Number:</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="number"
-              id="min"
-              step="1"
-            />
-            <label class="mdl-textfield__label" for="min">e.g. -7 ...</label>
-          </div>
-        </form>
-        <!-- Numeric Text Field for Max -->
-        <form action="#">
-          <p>Enter Maximum Number:</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="number"
-              id="max"
-              step="1"
-            />
-            <label class="mdl-textfield__label" for="max">e.g. 5 ...</label>
-          </div>
-        </form>
-        <!-- Raised button with ripple -->
-        <center>
+                <!-- Form for user age and day of the week -->
+        <form action="javascript:DisplayListNumbers()">
           <br>
-          <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="DisplayListNumbers()"
-        >
+          <label for="min"><p>Minimum Number:</p></label>
+          <input type="number" step="1" id="min" placeholder="Eg. -7"><br><br>		
+          <label for="max"><p>Maximum Number:</p></label>
+          <input type="number" step="1" id="max" placeholder="Eg. 5"><br><br>	
+          <!-- Button -->
+          <br><br>
+          <center>
+            <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
           Submit
           </button>
-        </center>
+          </center>
           <br>
         </form>
+          <br>
         <br>
         <!-- Display list of numbers from min-max to user -->
         <p>
